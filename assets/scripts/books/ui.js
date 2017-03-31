@@ -10,11 +10,22 @@ const onSuccess = function (data) {
   }
 }
 
+const onNoContentSuccess = function () {
+  console.log('Your request was successful and returned no content')
+}
+
 const onError = function (response) {
   console.error(response)
 }
 
+const onCreateError = function (response) {
+  console.error(reponse)
+  console.log('Did you check to see if this book already exists?')
+}
+
 module.exports = {
   onSuccess,
-  onError
+  onError,
+  onNoContentSuccess,
+  onCreateError
 }
